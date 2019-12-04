@@ -13,11 +13,14 @@ import {
   Text
 } from 'react-native';
 
+import {createBottomTabNavigator} from 'react-navigation'
+
+
 export default class App extends Component{
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text>Hello World</Text>
+				<Text>Hello Worldss</Text>
 			</View>
 		)
 	}
