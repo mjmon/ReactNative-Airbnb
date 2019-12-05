@@ -13,8 +13,10 @@ import Icon from 'react-native-vector-icons/Ionicons'
 class Explore extends Component{
 	render() {
 		return (
-			<SafeAreaView style={{flex: 1, backgroundColor: 'green'}}>
-            <View style={{height: 80, backgroundColor: 'white'}}>
+			<SafeAreaView style={{flex: 1}}>
+            <View style={{height: 80, backgroundColor: 'white'
+             , borderBottomWidth: 1, borderBottomColor: '#dddddd'
+            }}>
                <View style={{
                   flexDirection: 'row', 
                   alignItems: 'center', 
