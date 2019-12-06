@@ -83,11 +83,19 @@ class Explore extends Component{
                               borderWidth: 1, borderColor:'#dddddd'}}/>
                         </View>
                      </View>
-                     
+                     {/* Homes around the world */}
                      <View style={{marginTop: 40, backgroundColor: 'orange'}}>
                         <Text style={{fontSize: 24, fontWeight: '700'}}>
                            Homes around the world
                         </Text>
+                        <View style={{paddingHorizontal: 20, marginTop: 20}}>
+                           <View style={{width: width/2, height: width/2}}>
+                              <View style={{flex: 1, backgroundColor: 'yellow'}}>
+                              </View>
+                              <View style={{flex: 1, backgroundColor: 'red'}}>
+                              </View>
+                           </View>
+                        </View>
                      </View> 
                   </View>
                </ScrollView>
