@@ -8,15 +8,18 @@ import {
   TextInput,
   Platform,
   StatusBar,
-  ScrollView
+  ScrollView,
+  Image
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons'
+import Category from './components/Explore/Category'
 
 class Explore extends Component{
 
-   componentWillMount() {
-      this.startHeaderHeight = 80
+
+   componentDidMount() {
+      this.startHeaderHeight = 120
       if(Platform.OS == 'android') {
          this.startHeaderHeight = 100 + StatusBar.currentHeight
       }
@@ -26,7 +29,8 @@ class Explore extends Component{
 		return (
 			<SafeAreaView style={{flex: 1}}>
             <View style={{height: this.startHeaderHeight, backgroundColor: 'white',
-              borderBottomWidth: 1, borderBottomColor: '#dddddd'
+              borderBottomWidth: 1, borderBottomColor: '#dddddd',
+              paddingBottom: 25
             }}>
                <View style={{
                   flexDirection: 'row', height: 50, alignItems: 'center', 
@@ -49,6 +53,19 @@ class Explore extends Component{
                   <Text style={{fontSize: 24, fontWeight: '700', paddingHorizontal: 20}}>
                      What can we help you find, James?
                   </Text>
+                  <View style={{height: 130, marginTop: 20}}>
+                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                        <Category 
+                           imageUri={require('../assets/home.jpg')}
+                           name='Home'/>
+                        <Category  
+                           imageUri={require('../assets/experiences.jpg')}
+                           name='Experiences'/>
+                        <Category 
+                           imageUri={require('../assets/restaurant.jpg')}
+                           name='Restaurant'/>                           
+                     </ScrollView>
+                  </View>
                </View>
             </ScrollView>
          </SafeAreaView>
